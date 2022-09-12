@@ -11,8 +11,9 @@ public enum GameItems {
     GameItems(String value) {
         this.value = value;
     }
-    public static GameItems getItem(String v) {
-        return Arrays.stream(values()).filter(item -> item.value.equals(v)).findFirst().orElse(null);
+
+    public static GameItems getItem(String itemName) {
+        return Arrays.stream(values()).filter(item -> item.value.equalsIgnoreCase(itemName)).findFirst().orElse(null);
     }
 
     public static GameItems getRandomItem() {
