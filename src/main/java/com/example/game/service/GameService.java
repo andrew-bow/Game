@@ -26,7 +26,7 @@ public class GameService {
 
     private boolean compareItems(GameItems playerItem, GameItems computerItem) {
         if (playerItem == computerItem) {
-            throw new RuntimeException("incorrect choice");
+            throw new RuntimeException("incorrect input");
         } else return playerItem == GameItems.ROCK && computerItem == GameItems.SCISSORS ||
                 playerItem == GameItems.PAPER && computerItem == GameItems.ROCK ||
                 playerItem == GameItems.SCISSORS && computerItem == GameItems.PAPER;
